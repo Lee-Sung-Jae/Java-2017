@@ -2,8 +2,6 @@
 public class Ex03_07 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		int a;
 		float b;
 		

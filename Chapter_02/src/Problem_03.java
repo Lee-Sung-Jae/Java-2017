@@ -4,8 +4,6 @@ import java.io.IOException;
 public class Problem_03 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-
 		int a, b, result;
 		char k;
 		

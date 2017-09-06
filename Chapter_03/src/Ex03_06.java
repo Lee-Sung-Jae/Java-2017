@@ -2,8 +2,6 @@
 public class Ex03_06 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.out.printf("\n¡ŸπŸ≤ﬁ\nø¨Ω¿ \n");
 		System.out.printf("\t≈«≈∞\tø¨Ω¿ \n");
 		System.out.printf("¿Ã∞Õ¿ª\rµ§æÓæπ¥œ¥Ÿ \n");

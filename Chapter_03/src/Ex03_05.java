@@ -2,8 +2,6 @@
 public class Ex03_05 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.out.printf("%d\n", 123);
 		System.out.printf("%5d\n", 123);
 		System.out.printf("%05d\n", 123);

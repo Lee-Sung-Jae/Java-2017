@@ -4,7 +4,6 @@ public class Method1 {
 
 	public static void main(String[] args) {
 		System.out.println("A");
-		new UseClass1().main(null);
 	}
 
 	public static int intPlus(int one, int two) {
@@ -25,5 +24,13 @@ public class Method1 {
 	
 	public static int intRemainder(int one, int two) {
 		return one % two;
+	}
+	
+	protected static int protectedMethod(int input) {
+		return input;
+	}
+	
+	private static int privateMethod(int input) {
+		return input;
 	}
 }

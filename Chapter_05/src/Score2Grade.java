@@ -6,11 +6,11 @@ public class Score2Grade {
 		int score;
 		char grade;
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.printf("점수 입력 (최대 100) : ");
 		score = input.nextInt();
-		
-		switch(score / 10) {
+
+		switch (score / 10) {
 		case 10:
 		case 9:
 			grade = 'A';
@@ -28,7 +28,7 @@ public class Score2Grade {
 			grade = 'F';
 			break;
 		}
-		
+
 		System.out.printf("%d점은 %c등급입니다.\n", score, grade);
 	}
 

@@ -16,7 +16,7 @@ public class Problem_13 {
 		System.out.printf("두번째 수 입력 : ");
 		b = s.nextInt();
 
-		switch(ch) {
+		switch (ch) {
 		case '+':
 			System.out.printf("%d + %d = %d 입니다.\n", a, b, a + b);
 			break;

@@ -5,11 +5,11 @@ public class MonthDaysCount {
 	public static void main(String[] args) {
 		int month, days;
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.printf("일수가 궁금한 달(날짜) 입력 : ");
 		month = input.nextInt();
-		
-		switch(month) {
+
+		switch (month) {
 		case 2:
 			days = 28;
 			break;
@@ -32,7 +32,7 @@ public class MonthDaysCount {
 			days = 0;
 			break;
 		}
-		
+
 		System.out.printf("%d월은 %d일까지 있습니다.", month, days);
 	}
 

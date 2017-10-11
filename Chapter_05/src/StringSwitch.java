@@ -10,7 +10,7 @@ public class StringSwitch {
 		System.out.printf("달(날짜)의 이름 입력 (영어) : ");
 		month = input.next();
 
-		switch(month) {
+		switch (month) {
 		case "January":
 			monthNumber = 1;
 			break;
@@ -24,7 +24,7 @@ public class StringSwitch {
 			monthNumber = 0;
 			break;
 		}
-		
+
 		System.out.printf("%s는 %d월!", month, monthNumber);
 	}
 

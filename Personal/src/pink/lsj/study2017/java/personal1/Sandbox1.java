@@ -7,7 +7,7 @@ public class Sandbox1 {
 		// To run not static method in static method
 		System.out.println(new Sandbox1().randomNumber(1, 100));
 	}
-	
+
 	private int randomNumber(int min, int max) {
 		return (int) (Math.random() * (max - min) + min); // https://stackoverflow.com/q/7922978
 	}
@@ -15,7 +15,7 @@ public class Sandbox1 {
 
 class Main {
 	private int intA = 15;
-	
+
 	public void run() {
 		int intA = 10;
 		System.out.println(intA); // This prints 10

@@ -14,24 +14,32 @@ public class Ex08_12 {
 
 			switch (select) {
 			case 1:
-				System.out.printf("%c 자동차가 터널에 들어감\n", carName);
-				stack[top++] = carName++;
+				if (top > 4) {
+					System.out.printf("현재 터널이 가득 차서 더 이상 새로운 차량이 들어 갈 수 없습니다!\n");
+				} else {
+					System.out.printf("%c 차량이 터널에 들어갔습니다.\n", carName);
+					stack[top++] = carName++;
+				}
 				break;
 
 			case 2:
-				stack[top--] = carName--;
-				System.out.printf("%c 자동차가 터널에서 나옴\n", carName);
+				if (top < 1) {
+					System.out.printf("현재 터널이 비어있어 더 이상 나갈 차량이 없습니다!\n");
+				} else {
+					stack[--top] = ' ';
+					System.out.printf("%c 차량이 터널에서 나왔습니다.\n", --carName);
+				}
 				break;
 
 			case 3:
-				System.out.printf("현재 터널에 %d대가 있음.\n", top);
+				System.out.printf("현재 터널에 %d대의 차량이 있습니다.\n", top);
 				break;
-				
+
 			default:
 				System.out.printf("잘못 된 입력입니다.");
 			}
 		}
-		
+
 		System.out.printf("프로그램을 종료합니다.");
 	}
 

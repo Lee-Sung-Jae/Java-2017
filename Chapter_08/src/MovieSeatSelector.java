@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MovieSeatSelector2 {
+public class MovieSeatSelector {
 
 	public static void main(String[] args) {
 		int[] seats = new int[10];

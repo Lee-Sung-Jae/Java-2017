@@ -23,7 +23,7 @@ public class MovieSeatSelector {
 				row = (int) selectSeat.charAt(0) - 65;
 				col = (int) selectSeat.charAt(2) - 49;
 
-				if (col == 0 && (int) selectSeat.charAt(3) == 48)
+				if (col == 0 && (int) selectSeat.charAt(2) == 48)
 					col = 9;
 
 				if (row < 0 || row > 10 || col < 0 || col > 10)

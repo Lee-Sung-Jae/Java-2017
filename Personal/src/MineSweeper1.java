@@ -1,12 +1,15 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MineSweeper1 {
 
 	public static void main(String[] args) {
-		char board[][] = {
-			{'a','a','a','a','a','a','a','a','a','a'}
-		};
+		char board[][] = new char[10][10];
 		boolean mine[][] = new boolean[10][10];
+		
+		for(int i = 0; i < 10; i++)
+			for(int o = 0; o < 10; o++)
+				board[i][o] = '?';
 		
 		for(int i = 0; i < 10; i++)
 			for(int o = 0; o < 10; o++)
@@ -17,26 +20,14 @@ public class MineSweeper1 {
 		userInput(board);
 	}
 
-	private static void seeBoard(int[][] board) {
+	private static void seeBoard(char[][] board) {
 		System.out.printf(" 1234567890\n");
 		
 		for(int i = 0; i < 10; i++) {
 			System.out.printf("%c", (int) i + 65);
 			
 			for(int o = 0; o < 10; o++) {
-				switch(board[i][o]) {
-				case 0:
-					System.out.printf("*");
-					break;
-				case 1:
-					System.out.printf(mineCount(mine, i, o));
-					break;
-				case 2:
-					System.out.printf("F");
-					break;
-				default:
-					System.out.printf("E");
-				}
+				System.out.printf("%c", board[i][o]);
 			}
 			
 			System.out.printf("\n");
@@ -47,10 +38,28 @@ public class MineSweeper1 {
 		return 0;
 	}
 
-	private static void userInput(int[][] board) {
+	private static void userInput(char[][] board) {
 		Scanner scanner = new Scanner(System.in);
 		
-		scanner.close();		
+		while(true) {
+			String input = new String(scanner.nextLine());
+			int row = ((int) input.charAt(0)) - 65, col = ((int) input.charAt(1)) - 48;
+			if(row < 0 || row > 9 || col < 0 || col > 9)
+				System.out.printf("Wrong input");
+			else {
+				openBox(board, row, col);
+				break;
+			}
+		}
+
+		scanner.close();
+	}
+	
+	private static int openBox(char[][] board, int i, int o) {
+		
+		seeBoard(board);
+		
+		return 0;
 	}
 
 }

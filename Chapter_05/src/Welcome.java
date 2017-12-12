@@ -7,13 +7,13 @@ public class Welcome {
 		int currentHour = date.getHours();
 
 		if (currentHour <= 11)
-			System.out.println("¾ÆÄ§!");
+			System.out.println("ì•„ì¹¨!");
 		else if (currentHour <= 15)
-			System.out.println("Á¡½É!");
+			System.out.println("ì ì‹¬!");
 		else if (currentHour <= 20)
-			System.out.println("Àú³á!");
+			System.out.println("ì €ë…!");
 		else
-			System.out.println("¹ã!");
+			System.out.println("ë°¤!");
 	}
 
 }

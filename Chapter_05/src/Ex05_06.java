@@ -7,13 +7,13 @@ public class Ex05_06 {
 
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("Á¤¼ö¸¦ ÀÔ·Â : ");
+		System.out.printf("ì •ìˆ˜ë¥¼ ì…ë ¥ : ");
 		a = s.nextInt();
 
 		if ((a % 2) == 0) {
-			System.out.printf("ÀÔ·Â¹ŞÀº ¼ö %d(Àº)´Â Â¦¼öÀÔ´Ï´Ù.", a);
+			System.out.printf("ì…ë ¥ë°›ì€ ìˆ˜ %d(ì€)ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤.", a);
 		} else {
-			System.out.printf("ÀÔ·Â¹ŞÀº ¼ö %d(Àº)´Â È¦¼öÀÔ´Ï´Ù.", a);
+			System.out.printf("ì…ë ¥ë°›ì€ ìˆ˜ %d(ì€)ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤.", a);
 		}
 	}
 

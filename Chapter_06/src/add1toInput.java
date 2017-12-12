@@ -6,7 +6,7 @@ public class add1toInput {
 		int input, result = 0;
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("Á¤¼ö ÀÔ·Â: ");
+		System.out.print("ì •ìˆ˜ ìž…ë ¥: ");
 		input = s.nextInt();
 
 		for (int i = 1; i <= input; i++)

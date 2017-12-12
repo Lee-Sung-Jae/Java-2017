@@ -8,7 +8,7 @@ public class Ex05_08 {
 
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("Á¡¼ö ÀÔ·Â : ");
+		System.out.printf("ì ìˆ˜ ì…ë ¥ : ");
 		score = s.nextInt();
 
 		if (score >= 90)
@@ -22,7 +22,7 @@ public class Ex05_08 {
 		else
 			result = 'F';
 
-		System.out.printf("%dÁ¡Àº %cµî±ŞÀÔ´Ï´Ù.", score, result);
+		System.out.printf("%dì ì€ %cë“±ê¸‰ì…ë‹ˆë‹¤.", score, result);
 	}
 
 }

@@ -5,13 +5,13 @@ public class Ex08_11 {
 		int top = 0;
 		
 		stack[top] = 'A';
-		System.out.printf("stack[%d]¿¡ %c°¡ µé¾î°¨\n", top, stack[top++]);
+		System.out.printf("stack[%d]ì— %cê°€ ë“¤ì–´ê°\n", top, stack[top++]);
 		
 		stack[top] = 'B';
-		System.out.printf("stack[%d]¿¡ %c°¡ µé¾î°¨\n", top, stack[top++]);
+		System.out.printf("stack[%d]ì— %cê°€ ë“¤ì–´ê°\n", top, stack[top++]);
 		
 		stack[top] = 'C';
-		System.out.printf("stack[%d]¿¡ %c°¡ µé¾î°¨\n", top, stack[top++]);
+		System.out.printf("stack[%d]ì— %cê°€ ë“¤ì–´ê°\n", top, stack[top++]);
 	}
 
 }

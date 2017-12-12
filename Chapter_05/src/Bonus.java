@@ -8,17 +8,17 @@ public class Bonus {
 
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("½ÇÀûÀ» ÀÔ·Â (´ÜÀ§ : ¸¸¿ø) : ");
+		System.out.printf("ì‹¤ì ì„ ì…ë ¥ (ë‹¨ìœ„ : ë§Œì›) : ");
 		got = s.nextInt();
 
 		if (got >= need) {
-			System.out.printf("¸ñÇ¥ ½ÇÀû ´Ş¼º!\n");
+			System.out.printf("ëª©í‘œ ì‹¤ì  ë‹¬ì„±!\n");
 			if (got > need) {
 				bonus = (got - need) / 10;
-				System.out.printf("¸ñÇ¥ ½ÇÀûÀ» ÃÊ°úÇÏ¿´±â ¶§¹®¿¡ ¼º°ú±Ş %d¸¸¿øÀÌ Áö±ŞµË´Ï´Ù.\n", bonus);
+				System.out.printf("ëª©í‘œ ì‹¤ì ì„ ì´ˆê³¼í•˜ì˜€ê¸° ë•Œë¬¸ì— ì„±ê³¼ê¸‰ %dë§Œì›ì´ ì§€ê¸‰ë©ë‹ˆë‹¤.\n", bonus);
 			}
 		} else {
-			System.out.printf("¸ñÇ¥ ½ÇÀû ´Ş¼º ½ÇÆĞ..\n");
+			System.out.printf("ëª©í‘œ ì‹¤ì  ë‹¬ì„± ì‹¤íŒ¨..\n");
 		}
 	}
 

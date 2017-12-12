@@ -9,38 +9,38 @@ public class Ex08_12 {
 		int top = 0, select = 0;
 
 		while (select != 3) {
-			System.out.printf("<1> ³Ö±â <2> »©±â <3> Á¾·á\nÀÔ·Â : ");
+			System.out.printf("<1> ë„£ê¸° <2> ë¹¼ê¸° <3> ì¢…ë£Œ\nì…ë ¥ : ");
 			select = s.nextInt();
 
 			switch (select) {
 			case 1:
 				if (top > 4) {
-					System.out.printf("ÇöÀç ÅÍ³ÎÀÌ °¡µæ Â÷¼­ ´õ ÀÌ»ó »õ·Î¿î Â÷·®ÀÌ µé¾î °¥ ¼ö ¾ø½À´Ï´Ù!\n");
+					System.out.printf("í˜„ì¬ í„°ë„ì´ ê°€ë“ ì°¨ì„œ ë” ì´ìƒ ìƒˆë¡œìš´ ì°¨ëŸ‰ì´ ë“¤ì–´ ê°ˆ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!\n");
 				} else {
-					System.out.printf("%c Â÷·®ÀÌ ÅÍ³Î¿¡ µé¾î°¬½À´Ï´Ù.\n", carName);
+					System.out.printf("%c ì°¨ëŸ‰ì´ í„°ë„ì— ë“¤ì–´ê°”ìŠµë‹ˆë‹¤.\n", carName);
 					stack[top++] = carName++;
 				}
 				break;
 
 			case 2:
 				if (top < 1) {
-					System.out.printf("ÇöÀç ÅÍ³ÎÀÌ ºñ¾îÀÖ¾î ´õ ÀÌ»ó ³ª°¥ Â÷·®ÀÌ ¾ø½À´Ï´Ù!\n");
+					System.out.printf("í˜„ì¬ í„°ë„ì´ ë¹„ì–´ìˆì–´ ë” ì´ìƒ ë‚˜ê°ˆ ì°¨ëŸ‰ì´ ì—†ìŠµë‹ˆë‹¤!\n");
 				} else {
 					stack[--top] = ' ';
-					System.out.printf("%c Â÷·®ÀÌ ÅÍ³Î¿¡¼­ ³ª¿Ô½À´Ï´Ù.\n", --carName);
+					System.out.printf("%c ì°¨ëŸ‰ì´ í„°ë„ì—ì„œ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", --carName);
 				}
 				break;
 
 			case 3:
-				System.out.printf("ÇöÀç ÅÍ³Î¿¡ %d´ëÀÇ Â÷·®ÀÌ ÀÖ½À´Ï´Ù.\n", top);
+				System.out.printf("í˜„ì¬ í„°ë„ì— %dëŒ€ì˜ ì°¨ëŸ‰ì´ ìˆìŠµë‹ˆë‹¤.\n", top);
 				break;
 
 			default:
-				System.out.printf("Àß¸ø µÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.printf("ì˜ëª» ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 			}
 		}
 
-		System.out.printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+		System.out.printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 	}
 
 }

@@ -9,13 +9,13 @@ public class Problem_03 {
 
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("Ã¹¹øÂ° °è»ê ÇÒ °ªÀ» ÀÔ·ÂÇÕ´Ï´Ù. => ");
+		System.out.print("ì²«ë²ˆì§¸ ê³„ì‚° í•  ê°’ì„ ìž…ë ¥í•©ë‹ˆë‹¤. => ");
 		a = s.nextInt();
 
 		System.out.print("+ - * / % => ");
 		k = (char) System.in.read();
 
-		System.out.print("µÎ¹øÂ° °è»ê ÇÒ °ªÀ» ÀÔ·ÂÇÕ´Ï´Ù. => ");
+		System.out.print("ë‘ë²ˆì§¸ ê³„ì‚° í•  ê°’ì„ ìž…ë ¥í•©ë‹ˆë‹¤. => ");
 		b = s.nextInt();
 
 		switch (k) {
@@ -36,14 +36,14 @@ public class Problem_03 {
 				result = a / b;
 				System.out.println(a + " / " + b + " = " + result);
 			} else
-				System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù!");
+				System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 
 		case '%':
 			if (b != 0) {
 				result = a % b;
 				System.out.println(a + " % " + b + " = " + result);
 			} else
-				System.out.println("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù!");
+				System.out.println("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 		}
 
 	}

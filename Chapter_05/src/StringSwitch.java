@@ -7,7 +7,7 @@ public class StringSwitch {
 		String month;
 		Scanner input = new Scanner(System.in);
 
-		System.out.printf("´Ş(³¯Â¥)ÀÇ ÀÌ¸§ ÀÔ·Â (¿µ¾î) : ");
+		System.out.printf("ë‹¬(ë‚ ì§œ)ì˜ ì´ë¦„ ì…ë ¥ (ì˜ì–´) : ");
 		month = input.next();
 
 		switch (month) {
@@ -25,7 +25,7 @@ public class StringSwitch {
 			break;
 		}
 
-		System.out.printf("%s´Â %d¿ù!", month, monthNumber);
+		System.out.printf("%sëŠ” %dì›”!", month, monthNumber);
 	}
 
 }

@@ -14,7 +14,7 @@ public class Ex03_13 {
 		System.out.printf("%c\n", c);
 
 		d = '#';
-		System.out.printf("%cÀÇ ASCII °ªÀº %dÀÔ´Ï´Ù.\n", d, (int) d);
+		System.out.printf("%cì˜ ASCII ê°’ì€ %dì…ë‹ˆë‹¤.\n", d, (int) d);
 	}
 
 }

@@ -15,17 +15,17 @@ public class MovieSeatSelector {
 			for (int i = 0; i < 10; i++)
 				System.out.printf("  %d", seats[i]);
 
-			System.out.printf("\n¿¹¸Å ÇÒ ÁÂ¼®ÀÇ ¹øÈ£ ÀÔ·Â(Á¾·á : -1) : ");
+			System.out.printf("\nì˜ˆë§¤ í•  ì¢Œì„ì˜ ë²ˆí˜¸ ìž…ë ¥(ì¢…ë£Œ : -1) : ");
 			number = input.nextInt();
 
 			if (number == -1)
 				break;
 
 			if (seats[number - 1] == 1)
-				System.out.printf("¼±ÅÃÇÏ½Å ÁÂ¼®Àº ÀÌ¹Ì ¿¹¸Å µÇ¾ú½À´Ï´Ù! ´Ù¸¥ ÁÂ¼®À» ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+				System.out.printf("ì„ íƒí•˜ì‹  ì¢Œì„ì€ ì´ë¯¸ ì˜ˆë§¤ ë˜ì—ˆìŠµë‹ˆë‹¤! ë‹¤ë¥¸ ì¢Œì„ì„ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 			else {
 				seats[number - 1] = 1;
-				System.out.printf("%d¹ø ÁÂ¼®À» ¿¹¸ÅÇÏ¼Ì½À´Ï´Ù!\n", number);
+				System.out.printf("%dë²ˆ ì¢Œì„ì„ ì˜ˆë§¤í•˜ì…¨ìŠµë‹ˆë‹¤!\n", number);
 			}
 		}
 	}

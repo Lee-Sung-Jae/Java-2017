@@ -5,12 +5,12 @@ public class Ex05_07 {
 
 		if (a > 50) {
 			if (a < 100) {
-				System.out.println("50º¸´Ù Å©°í 100º¸´Ù ÀÛ´Ù.");
+				System.out.println("50ë³´ë‹¤ í¬ê³  100ë³´ë‹¤ ìž‘ë‹¤.");
 			} else {
-				System.out.println("100º¸´Ù Å©´Ù.");
+				System.out.println("100ë³´ë‹¤ í¬ë‹¤.");
 			}
 		} else {
-			System.out.println("50º¸´Ù ÀÛ´Ù.");
+			System.out.println("50ë³´ë‹¤ ìž‘ë‹¤.");
 		}
 	}
 

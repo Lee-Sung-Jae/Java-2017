@@ -6,7 +6,7 @@ public class MonthDaysCount {
 		int month, days;
 		Scanner input = new Scanner(System.in);
 
-		System.out.printf("ÀÏ¼ö°¡ ±Ã±İÇÑ ´Ş(³¯Â¥) ÀÔ·Â : ");
+		System.out.printf("ì¼ìˆ˜ê°€ ê¶ê¸ˆí•œ ë‹¬(ë‚ ì§œ) ì…ë ¥ : ");
 		month = input.nextInt();
 
 		switch (month) {
@@ -33,7 +33,7 @@ public class MonthDaysCount {
 			break;
 		}
 
-		System.out.printf("%d¿ùÀº %dÀÏ±îÁö ÀÖ½À´Ï´Ù.", month, days);
+		System.out.printf("%dì›”ì€ %dì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.", month, days);
 	}
 
 }

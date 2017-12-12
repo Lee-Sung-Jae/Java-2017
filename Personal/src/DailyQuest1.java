@@ -6,24 +6,24 @@ public class DailyQuest1 {
 		Date date = new Date();
 		int hour = date.getHours();
 
-		System.out.printf("ÇöÀç ½Ã°£ : %s\n\n", date.toString());
+		System.out.printf("í˜„ìž¬ ì‹œê°„ : %s\n\n", date.toString());
 
 		if (hour < 7 || hour > 21) {
-			System.out.printf("ÇöÀç ¼ö¸éÁß...\n");
+			System.out.printf("í˜„ìž¬ ìˆ˜ë©´ì¤‘...\n");
 		} else if (hour < 8) {
-			System.out.printf("ÇöÀç µî±³ ÁØºñÁß...");
+			System.out.printf("í˜„ìž¬ ë“±êµ ì¤€ë¹„ì¤‘...");
 		} else if (hour < 9) {
-			System.out.printf("ÇöÀç µî±³Áß...");
+			System.out.printf("í˜„ìž¬ ë“±êµì¤‘...");
 		} else if (hour < 13) {
-			System.out.printf("ÇöÀç ¿ÀÀü ¼ö¾÷ ¼ö°­Áß...");
+			System.out.printf("í˜„ìž¬ ì˜¤ì „ ìˆ˜ì—… ìˆ˜ê°•ì¤‘...");
 		} else if (hour < 14) {
-			System.out.printf("ÇöÀç Á¡½É ½Ä»çÁß...");
+			System.out.printf("í˜„ìž¬ ì ì‹¬ ì‹ì‚¬ì¤‘...");
 		} else if (hour < 17) {
-			System.out.printf("ÇöÀç ¿ÀÈÄ ¼ö¾÷ ¼ö°­Áß...");
+			System.out.printf("í˜„ìž¬ ì˜¤í›„ ìˆ˜ì—… ìˆ˜ê°•ì¤‘...");
 		} else if (hour < 21) {
-			System.out.printf("ÇöÀç µµÁ¦ ¿¹ºñ¹Ý ¼ö°­Áß...");
+			System.out.printf("í˜„ìž¬ ë„ì œ ì˜ˆë¹„ë°˜ ìˆ˜ê°•ì¤‘...");
 		} else if (hour < 23) {
-			System.out.printf("ÇöÀç ÁýÀ¸·Î º¹±ÍÁß...");
+			System.out.printf("í˜„ìž¬ ì§‘ìœ¼ë¡œ ë³µê·€ì¤‘...");
 		}
 	}
 

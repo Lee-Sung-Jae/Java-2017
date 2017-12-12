@@ -8,8 +8,8 @@ public class Ex03_07 {
 		a = (int) 123.45f;
 		b = 200;
 
-		System.out.printf("aÀÇ °ª ==> %d \n", a);
-		System.out.printf("bÀÇ °ª ==> %f \n", b);
+		System.out.printf("aì˜ ê°’ ==> %d \n", a);
+		System.out.printf("bì˜ ê°’ ==> %f \n", b);
 	}
 
 }

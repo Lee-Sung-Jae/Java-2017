@@ -6,9 +6,9 @@ public class Ex08_10 {
 		int m, n, v = 1;
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("Çà °³¼ö : ");
+		System.out.print("í–‰ ê°œìˆ˜ : ");
 		m = s.nextInt();
-		System.out.print("¿­ °³¼ö : ");
+		System.out.print("ì—´ ê°œìˆ˜ : ");
 		n = s.nextInt();
 
 		int[][] aa = new int[m][n];
@@ -18,7 +18,7 @@ public class Ex08_10 {
 		for (int i = 0; i < m; i++)
 			for (int o = 0; o < n; o++) {
 				aa[i][o] = v++;
-				System.out.printf("%dÇà %d¿­ == %d" + ((o < n - 1) ? ",\t" : "\n"), i + 1, o + 1, aa[i][o]);
+				System.out.printf("%dí–‰ %dì—´ == %d" + ((o < n - 1) ? ",\t" : "\n"), i + 1, o + 1, aa[i][o]);
 			}
 
 	}

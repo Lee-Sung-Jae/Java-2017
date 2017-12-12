@@ -6,13 +6,13 @@ public class addAtoBwithC {
 		int start, end, add, result = 0;
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("½ÃÀÛ °ª ÀÔ·Â: ");
+		System.out.print("ì‹œì‘ ê°’ ì…ë ¥: ");
 		start = s.nextInt();
 
-		System.out.print("Á¾·á °ª ÀÔ·Â: ");
+		System.out.print("ì¢…ë£Œ ê°’ ì…ë ¥: ");
 		end = s.nextInt();
 
-		System.out.print("Áõ°¨ °ª ÀÔ·Â: ");
+		System.out.print("ì¦ê° ê°’ ì…ë ¥: ");
 		add = s.nextInt();
 
 		for (int i = start; i <= end; i += add)

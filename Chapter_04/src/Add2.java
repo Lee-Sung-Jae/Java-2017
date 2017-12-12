@@ -6,13 +6,13 @@ public class Add2 {
 		int a, b;
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("Ã¹¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		a = s.nextInt();
 
-		System.out.print("µÎ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		b = s.nextInt();
 
-		System.out.printf("%d + %d´Â %dÀÔ´Ï´Ù.", a, b, a + b);
+		System.out.printf("%d + %dëŠ” %dì…ë‹ˆë‹¤.", a, b, a + b);
 	}
 
 }

@@ -2,9 +2,9 @@
 public class Ex03_15 {
 
 	public static void main(String[] args) {
-		String str1 = "ÀÎÆòÀÚµ¿Â÷Á¤º¸°íµîÇĞ±³ ÀÔ´Ï´Ù.";
-		String str2 = "À¥ÄÜÅÙÃ÷°ú";
-		String str3 = "¿¹ºñµµÁ¦¹İ ÀÔ´Ï´Ù.";
+		String str1 = "ì¸í‰ìë™ì°¨ì •ë³´ê³ ë“±í•™êµ ì…ë‹ˆë‹¤.";
+		String str2 = "ì›¹ì½˜í…ì¸ ê³¼";
+		String str3 = "ì˜ˆë¹„ë„ì œë°˜ ì…ë‹ˆë‹¤.";
 
 		System.out.printf("%s\n", str1);
 		System.out.printf("%s\n", str2 + str3);

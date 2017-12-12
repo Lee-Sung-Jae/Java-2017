@@ -6,16 +6,16 @@ public class Box {
 		double a, b, size, length;
 		Scanner s = new Scanner(System.in);
 
-		System.out.print("Á÷»ç°¢ÇüÀÇ °¡·Î : ");
+		System.out.print("ì§ì‚¬ê°í˜•ì˜ ê°€ë¡œ : ");
 		a = s.nextDouble();
 
-		System.out.print("Á÷»ç°¢ÇüÀÇ ¼¼·Î : ");
+		System.out.print("ì§ì‚¬ê°í˜•ì˜ ì„¸ë¡œ : ");
 		b = s.nextDouble();
 
 		size = a * b;
 		length = (a + b) * 2.0;
 
-		System.out.printf("°¡·Î°¡ %.1f°í ¼¼·Î°¡ %.1fÀÎ »ç°¢ÇüÀÇ ³ĞÀÌ´Â %.1f°í, µÑ·¹´Â %.1fÀÔ´Ï´Ù.", a, b, size, length);
+		System.out.printf("ê°€ë¡œê°€ %.1fê³  ì„¸ë¡œê°€ %.1fì¸ ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” %.1fê³ , ë‘˜ë ˆëŠ” %.1fì…ë‹ˆë‹¤.", a, b, size, length);
 	}
 
 }

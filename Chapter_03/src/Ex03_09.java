@@ -8,14 +8,14 @@ public class Ex03_09 {
 		b = a + 100;
 		c = a + b - 100;
 		d = a + b + c;
-		System.out.printf("a, b, c, dÀÇ °ª ==> %d, %d, %d, %d\n", a, b, c, d);
+		System.out.printf("a, b, c, dì˜ ê°’ ==> %d, %d, %d, %d\n", a, b, c, d);
 
 		a = b = c = d = 100;
-		System.out.printf("a, b, c, dÀÇ °ª ==> %d, %d, %d, %d\n", a, b, c, d);
+		System.out.printf("a, b, c, dì˜ ê°’ ==> %d, %d, %d, %d\n", a, b, c, d);
 
 		a = 100;
 		a = a + 200;
-		System.out.printf("aÀÇ °ª ==> %d", a);
+		System.out.printf("aì˜ ê°’ ==> %d", a);
 	}
 
 }

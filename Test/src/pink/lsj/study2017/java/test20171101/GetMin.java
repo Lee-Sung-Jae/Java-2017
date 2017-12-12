@@ -10,7 +10,7 @@ public class GetMin {
 			if(min > s[i])
 				min = s[i];
 		
-		System.out.printf("¹è¿­ s[]ÀÇ °ªÁß °¡Àå ÀÛÀº °ªÀº %dÀÔ´Ï´Ù.", min);
+		System.out.printf("ë°°ì—´ s[]ì˜ ê°’ì¤‘ ê°€ì¥ ì‘ì€ ê°’ì€ %dì…ë‹ˆë‹¤.", min);
 	}
 
 }

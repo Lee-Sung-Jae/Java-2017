@@ -5,11 +5,11 @@ public class CircleArea {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("¿øÀÇ ¹İÁö¸§ : ");
+		System.out.printf("ì›ì˜ ë°˜ì§€ë¦„ : ");
 		double input = s.nextDouble();
 
 		double circleSize = input * input * 3.14;
-		System.out.printf("¹İÁö¸§ÀÌ %fÀÎ ¿øÀÇ ³ĞÀÌ´Â %fÀÔ´Ï´Ù.", input, circleSize);
+		System.out.printf("ë°˜ì§€ë¦„ì´ %fì¸ ì›ì˜ ë„“ì´ëŠ” %fì…ë‹ˆë‹¤.", input, circleSize);
 	}
 
 }

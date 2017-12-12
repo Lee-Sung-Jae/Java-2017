@@ -6,7 +6,7 @@ public class SeqSearch {
 		int s[] = { 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }, value, index = -1;
 		Scanner input = new Scanner(System.in);
 
-		System.out.printf("°Ë»ö ÇÒ Á¤¼ö ÀÔ·Â : ");
+		System.out.printf("ê²€ìƒ‰ í•  ì •ìˆ˜ ì…ë ¥ : ");
 		value = input.nextInt();
 
 		for (int i = 0; i < s.length; i++) {
@@ -15,7 +15,7 @@ public class SeqSearch {
 		}
 		
 		if(index < s.length && index >= 0)
-			System.out.printf("ÀÔ·ÂÇÏ½Å °ª %dÀº ¹è¿­ÀÇ %d À§Ä¡¿¡ ÀÖ½À´Ï´Ù.", value, index);
+			System.out.printf("ì…ë ¥í•˜ì‹  ê°’ %dì€ ë°°ì—´ì˜ %d ìœ„ì¹˜ì— ìˆìŠµë‹ˆë‹¤.", value, index);
 	}
 
 }

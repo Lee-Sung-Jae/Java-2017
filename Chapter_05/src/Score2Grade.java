@@ -7,7 +7,7 @@ public class Score2Grade {
 		char grade;
 		Scanner input = new Scanner(System.in);
 
-		System.out.printf("Á¡¼ö ÀÔ·Â (ÃÖ´ë 100) : ");
+		System.out.printf("ì ìˆ˜ ì…ë ¥ (ìµœëŒ€ 100) : ");
 		score = input.nextInt();
 
 		switch (score / 10) {
@@ -29,7 +29,7 @@ public class Score2Grade {
 			break;
 		}
 
-		System.out.printf("%dÁ¡Àº %cµî±ŞÀÔ´Ï´Ù.\n", score, grade);
+		System.out.printf("%dì ì€ %cë“±ê¸‰ì…ë‹ˆë‹¤.\n", score, grade);
 	}
 
 }

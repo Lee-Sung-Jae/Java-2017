@@ -7,10 +7,10 @@ public class Langer {
 
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("Ã¹¹øÂ° Á¤¼ö : ");
+		System.out.printf("ì²«ë²ˆì§¸ ì •ìˆ˜ : ");
 		first = s.nextInt();
 
-		System.out.printf("µÎ¹øÂ° Á¤¼ö : ");
+		System.out.printf("ë‘ë²ˆì§¸ ì •ìˆ˜ : ");
 		second = s.nextInt();
 
 		if (first > second)
@@ -18,7 +18,7 @@ public class Langer {
 		else
 			result = second;
 
-		System.out.printf("µÎ Á¤¼ö %d¿Í %d Áß¿¡¼­ ´õ Å« ¼ö´Â %dÀÔ´Ï´Ù.", first, second, result);
+		System.out.printf("ë‘ ì •ìˆ˜ %dì™€ %d ì¤‘ì—ì„œ ë” í° ìˆ˜ëŠ” %dì…ë‹ˆë‹¤.", first, second, result);
 	}
 
 }

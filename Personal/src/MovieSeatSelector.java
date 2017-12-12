@@ -9,16 +9,16 @@ public class MovieSeatSelector {
 		String selectSeat;
 
 		while (selectMenu != 4) {
-			System.out.printf("<1> ¿¹¸Å <2> Ãë¼Ò <3> ¸ñ·Ï <4> Á¾·á\n¼±ÅÃ : ");
+			System.out.printf("<1> ì˜ˆë§¤ <2> ì·¨ì†Œ <3> ëª©ë¡ <4> ì¢…ë£Œ\nì„ íƒ : ");
 			selectMenu = input.nextInt();
 			input.nextLine();
 
 			switch (selectMenu) {
 			case 1:
-				System.out.printf("ÇöÀç ¿¹¸Å »óÈ²\n");
+				System.out.printf("í˜„ì¬ ì˜ˆë§¤ ìƒí™©\n");
 				listSeats(seats);
 
-				System.out.printf("¿¹¸Å ÇÒ ÁÂ¼® ÀÔ·Â ('A 1' Çü½Ä) : ");
+				System.out.printf("ì˜ˆë§¤ í•  ì¢Œì„ ì…ë ¥ ('A 1' í˜•ì‹) : ");
 				selectSeat = input.nextLine();
 				row = (int) selectSeat.charAt(0) - 65;
 				col = (int) selectSeat.charAt(2) - 49;
@@ -27,22 +27,22 @@ public class MovieSeatSelector {
 					col = 9;
 
 				if (row < 0 || row > 10 || col < 0 || col > 10)
-					System.out.printf("ÀÔ·ÂÀÌ Àß¸øµÇ¾ú½À´Ï´Ù! 'A 1'°ú °°Àº Çü½Ä¿¡ ¸ÂÃß¾î ÀÛ¼ºÇØ ÁÖ¼¼¿ä.\n");
+					System.out.printf("ì…ë ¥ì´ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤! 'A 1'ê³¼ ê°™ì€ í˜•ì‹ì— ë§ì¶”ì–´ ì‘ì„±í•´ ì£¼ì„¸ìš”.\n");
 				else {
 					if (seats[row][col])
-						System.out.printf("¼±ÅÃÇÏ½Å ÁÂ¼®Àº ÀÌ¹Ì ¿¹¸Å µÇ¾ú½À´Ï´Ù! ´Ù¸¥ ÁÂ¼®À» ¿¹¸ÅÇØÁÖ¼¼¿ä.\n");
+						System.out.printf("ì„ íƒí•˜ì‹  ì¢Œì„ì€ ì´ë¯¸ ì˜ˆë§¤ ë˜ì—ˆìŠµë‹ˆë‹¤! ë‹¤ë¥¸ ì¢Œì„ì„ ì˜ˆë§¤í•´ì£¼ì„¸ìš”.\n");
 					else {
 						seats[row][col] = true;
-						System.out.printf("%cÇà %d¿­ ÁÂ¼®À» ¿¹¸ÅÇÏ¼Ì½À´Ï´Ù!\n", (char) row + 65, col + 1);
+						System.out.printf("%cí–‰ %dì—´ ì¢Œì„ì„ ì˜ˆë§¤í•˜ì…¨ìŠµë‹ˆë‹¤!\n", (char) row + 65, col + 1);
 					}
 				}
 				break;
 
 			case 2:
-				System.out.printf("ÇöÀç ¿¹¸Å »óÈ²\n");
+				System.out.printf("í˜„ì¬ ì˜ˆë§¤ ìƒí™©\n");
 				listSeats(seats);
 
-				System.out.printf("Ãë¼Ò ÇÒ ÁÂ¼® ÀÔ·Â ('A 1' Çü½Ä) : ");
+				System.out.printf("ì·¨ì†Œ í•  ì¢Œì„ ì…ë ¥ ('A 1' í˜•ì‹) : ");
 				selectSeat = input.nextLine();
 				row = (int) selectSeat.charAt(0) - 65;
 				col = (int) selectSeat.charAt(2) - 49;
@@ -51,28 +51,28 @@ public class MovieSeatSelector {
 					col = 9;
 
 				if (row < 0 || row > 10 || col < 0 || col > 10)
-					System.out.printf("ÀÔ·ÂÀÌ Àß¸øµÇ¾ú½À´Ï´Ù! 'A 1'°ú °°Àº Çü½Ä¿¡ ¸ÂÃß¾î ÀÛ¼ºÇØ ÁÖ¼¼¿ä.\n");
+					System.out.printf("ì…ë ¥ì´ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤! 'A 1'ê³¼ ê°™ì€ í˜•ì‹ì— ë§ì¶”ì–´ ì‘ì„±í•´ ì£¼ì„¸ìš”.\n");
 				else {
 					if (seats[row][col])
-						System.out.printf("¼±ÅÃÇÏ½Å ÁÂ¼®Àº ¿¹¸Å µÇ¾îÀÖÁö ¾Ê½À´Ï´Ù! ÀÔ·ÂÀ» ´Ù½Ã ÇÑ¹ø È®ÀÎÇØÁÖ¼¼¿ä.\n");
+						System.out.printf("ì„ íƒí•˜ì‹  ì¢Œì„ì€ ì˜ˆë§¤ ë˜ì–´ìˆì§€ ì•ŠìŠµë‹ˆë‹¤! ì…ë ¥ì„ ë‹¤ì‹œ í•œë²ˆ í™•ì¸í•´ì£¼ì„¸ìš”.\n");
 					else {
 						seats[row][col] = false;
-						System.out.printf("%cÇà %d¿­ ÁÂ¼®À» Ãë¼ÒÇÏ¼Ì½À´Ï´Ù!\n", (char) row + 65, col + 1);
+						System.out.printf("%cí–‰ %dì—´ ì¢Œì„ì„ ì·¨ì†Œí•˜ì…¨ìŠµë‹ˆë‹¤!\n", (char) row + 65, col + 1);
 					}
 				}
 				break;
 
 			case 3:
-				System.out.printf("ÇöÀç ¿¹¸Å »óÈ²\n");
+				System.out.printf("í˜„ì¬ ì˜ˆë§¤ ìƒí™©\n");
 				listSeats(seats);
 				break;
 
 			case 4:
-				System.out.printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
+				System.out.printf("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n");
 				break;
 
 			default:
-				System.out.printf("Àß¸ø µÈ ÀÔ·ÂÀÔ´Ï´Ù!\n");
+				System.out.printf("ì˜ëª» ëœ ì…ë ¥ì…ë‹ˆë‹¤!\n");
 			}
 		}
 	}

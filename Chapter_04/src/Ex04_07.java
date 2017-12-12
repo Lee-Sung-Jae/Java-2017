@@ -7,9 +7,9 @@ public class Ex04_07 {
 		boolean a = (num1 != 0);
 		boolean b = (num2 != 0);
 
-		System.out.printf("»ó¼öÀÇ AND ¿¬»ê : %s\n", a && b);
-		System.out.printf("»ó¼öÀÇ OR ¿¬»ê : %s\n", a || b);
-		System.out.printf("»ó¼öÀÇ NOT ¿¬»ê : %s\n", !a);
+		System.out.printf("ìƒìˆ˜ì˜ AND ì—°ì‚° : %s\n", a && b);
+		System.out.printf("ìƒìˆ˜ì˜ OR ì—°ì‚° : %s\n", a || b);
+		System.out.printf("ìƒìˆ˜ì˜ NOT ì—°ì‚° : %s\n", !a);
 	}
 
 }

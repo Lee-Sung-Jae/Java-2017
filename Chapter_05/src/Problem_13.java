@@ -7,33 +7,33 @@ public class Problem_13 {
 		char ch;
 		Scanner s = new Scanner(System.in);
 
-		System.out.printf("Ã¹¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.printf("ì²«ë²ˆì§¸ ìˆ˜ ì…ë ¥ : ");
 		a = s.nextInt();
 
-		System.out.printf("°è»êÇÒ ¿¬»êÀÚ ÀÔ·Â : ");
+		System.out.printf("ê³„ì‚°í•  ì—°ì‚°ì ì…ë ¥ : ");
 		ch = s.next().charAt(0);
 
-		System.out.printf("µÎ¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.printf("ë‘ë²ˆì§¸ ìˆ˜ ì…ë ¥ : ");
 		b = s.nextInt();
 
 		switch (ch) {
 		case '+':
-			System.out.printf("%d + %d = %d ÀÔ´Ï´Ù.\n", a, b, a + b);
+			System.out.printf("%d + %d = %d ì…ë‹ˆë‹¤.\n", a, b, a + b);
 			break;
 		case '-':
-			System.out.printf("%d - %d = %d ÀÔ´Ï´Ù.\n", a, b, a - b);
+			System.out.printf("%d - %d = %d ì…ë‹ˆë‹¤.\n", a, b, a - b);
 			break;
 		case '*':
-			System.out.printf("%d * %d = %d ÀÔ´Ï´Ù.\n", a, b, a * b);
+			System.out.printf("%d * %d = %d ì…ë‹ˆë‹¤.\n", a, b, a * b);
 			break;
 		case '/':
-			System.out.printf("%d / %d = %f ÀÔ´Ï´Ù.\n", a, b, a / (float) b);
+			System.out.printf("%d / %d = %f ì…ë‹ˆë‹¤.\n", a, b, a / (float) b);
 			break;
 		case '%':
-			System.out.printf("%d %% %d = %d ÀÔ´Ï´Ù.\n", a, b, a % b);
+			System.out.printf("%d %% %d = %d ì…ë‹ˆë‹¤.\n", a, b, a % b);
 			break;
 		default:
-			System.out.printf("¿¬»êÀÚ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù.\n");
+			System.out.printf("ì—°ì‚°ìë¥¼ ì˜ëª» ì…ë ¥í–ˆìŠµë‹ˆë‹¤.\n");
 			break;
 		}
 	}

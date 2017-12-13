@@ -20,16 +20,16 @@ public class TSPProperties {
 			defaults.put(keys[i], values[i]);
 	}
 
-	protected String set(String key, String value) {
+	protected static String set(String key, String value) {
 		properties.setProperty(key, value);
 		return value;
 	}
 
-	protected String get(String key) {
+	protected static String get(String key) {
 		return (properties.getProperty(key) == null) ? ((defaults == null) ? null : defaults.get(key)) : properties.getProperty(key);
 	}
 
-	protected boolean isSet(String key) {
+	protected static boolean isSet(String key) {
 		return (properties.getProperty(key) != null);
 	}
 

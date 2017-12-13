@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class TestScoreProcess {
 	private static TSPProperties properties;
 	private static Scanner scanner = new Scanner(System.in);
-	private static NumberProcess numberProcess = new NumberProcess();
 	private static String[] students, subjects;
 	private static double[][] scores;
 	private static int[][] rankings;
@@ -47,7 +46,7 @@ public class TestScoreProcess {
 		if(!properties.isSet("studentsCount")) {
 			while (true) {
 				System.out.printf("Enter students count : ");
-				int[] numbersTmp = numberProcess.parseInt(scanner.nextLine());
+				int[] numbersTmp = NumberProcess.parseInt(scanner.nextLine());
 				if (numbersTmp[0] == 1) {
 					properties.set("studentsCount", Integer.toString(numbersTmp[1]));
 					break;
@@ -80,8 +79,8 @@ public class TestScoreProcess {
 					continue;
 				} else {
 					for (int o = 0; o < scoresTmp.length; o++) {
-						if (numberProcess.parseDouble(scoresTmp[o])[0] == 1) {
-							scores[i][o] = numberProcess.parseDouble(scoresTmp[o])[1];
+						if (NumberProcess.parseDouble(scoresTmp[o])[0] == 1) {
+							scores[i][o] = NumberProcess.parseDouble(scoresTmp[o])[1];
 						} else {
 							System.out.printf("Entered score \"%s\" (%s) is incorrect score! Please check your input.\n",
 									scoresTmp[o], subjects[o]);

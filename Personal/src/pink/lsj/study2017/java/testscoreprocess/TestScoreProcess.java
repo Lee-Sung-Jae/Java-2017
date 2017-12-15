@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class TestScoreProcess {
 	private static TSPProperties properties;
+	private static TSPData data;
 	private static Scanner scanner = new Scanner(System.in);
-	private static String[] students, subjects;
-	private static double[][] scores;
-	private static int[][] rankings;
+	private static String[] subjects;
+	private static int studentsCount;
 
 	public static void main(String[] args) {
 		Map<String, String> defaultProperties = new HashMap<>();
@@ -29,14 +29,10 @@ public class TestScoreProcess {
 		getConfigureInput();
 
 		subjects = properties.get("subjectsStr").split(" ");
-
-		students = new String[NumberProcess.parseInt(properties.get("studentsCount"))[1]];
-		scores = new double[students.length][subjects.length + 2];
-		rankings = new int[students.length][subjects.length + 1];
+		studentsCount = NumberProcess.parseInt(properties.get("studentsCount"))[1];
+		data = new TSPData(studentsCount, subjects.length);
 
 		getDataInput();
-		processScore();
-		processRanking();
 		printResult();
 
 		scanner.close();
@@ -67,65 +63,43 @@ public class TestScoreProcess {
 	}
 
 	private static void getDataInput() {
-		for (int i = 0; i < students.length; i++) {
+		for (int i = 0; i < studentsCount; i++) {
 			System.out.printf("Enter student name (#%d) : ", i + 1);
-			students[i] = scanner.nextLine();
+			data.addStudent(scanner.nextLine());
 
 			scoresInput: while (true) {
 				System.out.printf("Enter test scores with following format (%s) : ", properties.get("subjectsStr"));
 				String[] scoresTmp = scanner.nextLine().split(" ");
+				double[] scoresTmpArr = new double[scoresTmp.length + 2];
 				if (scoresTmp.length != subjects.length) {
 					System.out.printf("Wrong input! Please check your input.\n");
 					continue;
 				} else {
 					for (int o = 0; o < scoresTmp.length; o++) {
 						if (NumberProcess.parseDouble(scoresTmp[o])[0] == 1) {
-							scores[i][o] = NumberProcess.parseDouble(scoresTmp[o])[1];
+							scoresTmpArr[o] = NumberProcess.parseDouble(scoresTmp[o])[1];
 						} else {
 							System.out.printf("Entered score \"%s\" (%s) is incorrect score! Please check your input.\n",
 									scoresTmp[o], subjects[o]);
 							continue scoresInput;
 						}
 					}
+					data.setScores(i, scoresTmpArr);
 					break;
 				}
 			}
 		}
 	}
 
-	private static void processScore() {
-		for (int i = 0; i < students.length; i++) {
-			scores[i][subjects.length] = 0;
-			for (int o = 0; o < subjects.length; o++) {
-				scores[i][subjects.length] += scores[i][o];
-			}
-			scores[i][subjects.length + 1] = scores[i][subjects.length] / subjects.length;
-		}
-	}
-
-	private static void processRanking() {
-		for (int i = 0; i < students.length; i++) {
-			for (int o = 0; o < subjects.length + 1; o++) {
-				int rankingTmp = 1;
-				for (int p = 0; p < students.length; p++) {
-					if (i == p)
-						continue;
-					if (scores[i][o] < scores[p][o])
-						rankingTmp++;
-				}
-				rankings[i][o] = rankingTmp;
-			}
-		}
-	}
-
 	private static void printResult() {
-		for (int i = 0; i < students.length; i++) {
-			System.out.printf("%s\n", students[i]);
+		for (int i = 0; i < data.getIndex(); i++) {
+			String[][] studentData = data.getStudent(i);
+			System.out.printf("Student %s (#%d) scores\n", studentData[0][0], i + 1);
 			for (int o = 0; o < subjects.length; o++) {
-				System.out.printf("\t%s(#%d) : %.2f\n", subjects[o], rankings[i][o], scores[i][o]);
+				System.out.printf("\t%s(#%s) : %s\n", subjects[o], studentData[2][o], studentData[1][o]);
 			}
-			System.out.printf("\tOverall(#%d) (Average) : %.2f (%.2f)\n",
-					rankings[i][subjects.length], scores[i][subjects.length], scores[i][subjects.length + 1]);
+			System.out.printf("\tOverall(#%s) (Average) : %s (%s)\n",
+					studentData[2][subjects.length], studentData[1][subjects.length], studentData[1][subjects.length + 1]);
 			System.out.printf("\n");
 		}
 	}

@@ -1,7 +1,10 @@
 package pink.lsj.study2017.java.testscoreprocess;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -34,5 +37,11 @@ class TSPProperties {
 
 	static void setToDefault(String key) {
 		properties.setProperty(key, defaults.get(key));
+	}
+
+	static void saveToFile(String path) throws IOException {
+		properties.store(new FileOutputStream(path),
+				String.format("Created at %s by TestScoreProcess.\nCopyright (C) Lee-Sung-Jae, All rights reserved.",
+						(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")).format(new Date()).toString()));
 	}
 }

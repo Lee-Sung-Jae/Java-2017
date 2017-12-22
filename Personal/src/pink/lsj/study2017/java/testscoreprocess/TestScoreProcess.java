@@ -9,15 +9,21 @@ public class TestScoreProcess {
 	private static int studentsCount;
 
 	public static void main(String[] args) {
+		String properties, defaultProperties = "tsp.properties";
 		String[] keys = { "studentsCount", "subjectsStr" };
 		String[] values = { "10", "Korean English Math P.E. Programming" };
 
-		try {
-			new TSPProperties(keys, values, "tsp.properties");
-			System.out.println("Properties file found.");
-		} catch (IOException e) {
-			new TSPProperties(keys, values);
-		}
+		System.out.printf("Please enter path to load properties(Blank to don't load, dot to default path(%s)). : ", defaultProperties);
+		if(!(properties = scanner.nextLine()).isEmpty()) {
+			if(properties.equals(".")) properties = defaultProperties;
+			try {
+				new TSPProperties(keys, values, properties);
+				System.out.println("Properties file found.");
+			} catch (IOException e) {
+				System.out.printf("Unable to load file from %s! Please check path that you entered, Error message : %s\n", properties, e.getMessage());
+				new TSPProperties(keys, values);
+			}
+		} else new TSPProperties(keys, values);
 
 		getConfigureInput();
 
@@ -27,6 +33,7 @@ public class TestScoreProcess {
 
 		getDataInput();
 		printResult();
+		savePrompt();
 
 		scanner.close();
 	}
@@ -83,5 +90,18 @@ public class TestScoreProcess {
 			for (int o = 0; o < subjects.length; o++) System.out.printf("\t%s(#%s) : %s\n", subjects[o], studentData[2][o], studentData[1][o]);
 			System.out.printf("\tOverall(#%s) (Average) : %s (%s)\n\n", studentData[2][subjects.length], studentData[1][subjects.length], studentData[1][subjects.length + 1]);
 		}
+	}
+
+	private static void savePrompt() {
+		String properties;
+		System.out.print("Please enter path to save properties(Blank to don't save). : ");
+		if(!(properties = scanner.nextLine()).isEmpty()) {
+			try {
+				TSPProperties.saveToFile(properties);
+				System.out.printf("Successfully saved properties to %s!", properties);
+			} catch (IOException e) {
+				System.out.printf("Unable to save file to %s! Please check path that you entered, Error message : %s\n", properties, e.getMessage());
+			}
+		} else System.out.println("Don't saving properties file.");
 	}
 }

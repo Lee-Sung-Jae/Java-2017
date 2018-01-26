@@ -1,8 +1,8 @@
 package pink.lsj.study2017.java.testscoreprocess;
 
-import java.io.*;
-import java.text.DateFormat;
-import java.text.ParseException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;

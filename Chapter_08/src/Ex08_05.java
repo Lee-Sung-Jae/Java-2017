@@ -5,7 +5,7 @@ public class Ex08_05 {
 		int[] bb = new int[100];
 		int i;
 
-		for (i = 0; i < 100; i++) {
+		for(i = 0; i < 100; i++) {
 			aa[i] = i * 2;
 			System.out.printf("aa[%d] = %d", i, aa[i]);
 		}

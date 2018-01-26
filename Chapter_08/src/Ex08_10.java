@@ -15,8 +15,8 @@ public class Ex08_10 {
 
 		System.out.printf("\n");
 
-		for (int i = 0; i < m; i++)
-			for (int o = 0; o < n; o++) {
+		for(int i = 0; i < m; i++)
+			for(int o = 0; o < n; o++) {
 				aa[i][o] = v++;
 				System.out.printf("%d행 %d열 == %d" + ((o < n - 1) ? ",\t" : "\n"), i + 1, o + 1, aa[i][o]);
 			}

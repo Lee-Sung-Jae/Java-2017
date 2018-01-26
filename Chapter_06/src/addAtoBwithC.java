@@ -15,7 +15,7 @@ public class addAtoBwithC {
 		System.out.print("증감 값 입력: ");
 		add = s.nextInt();
 
-		for (int i = start; i <= end; i += add)
+		for(int i = start; i <= end; i += add)
 			result += i;
 
 		System.out.println(result);

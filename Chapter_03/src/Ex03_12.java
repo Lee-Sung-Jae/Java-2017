@@ -23,7 +23,7 @@ public class Ex03_12 {
 
 		System.out.printf("\n");
 
-		for (int i = 0; i < 128; i++) {
+		for(int i = 0; i < 128; i++) {
 			System.out.printf("%d\t%c\n", i, (char) i);
 		}
 	}

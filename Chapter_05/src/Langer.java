@@ -13,7 +13,7 @@ public class Langer {
 		System.out.printf("두번째 정수 : ");
 		second = s.nextInt();
 
-		if (first > second)
+		if(first > second)
 			result = first;
 		else
 			result = second;

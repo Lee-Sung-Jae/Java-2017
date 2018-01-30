@@ -15,11 +15,13 @@ class TSPProperties {
 
 	TSPProperties(String[] keys, String[] values, String path) throws IOException {
 		properties.load(new FileReader(path));
-		for(int i = 0; i < keys.length; i++) defaults.put(keys[i], values[i]);
+		for(int keysIndex = 0; keysIndex < keys.length; keysIndex++)
+			defaults.put(keys[keysIndex], values[keysIndex]);
 	}
 
 	TSPProperties(String[] keys, String[] values) {
-		for(int i = 0; i < keys.length; i++) defaults.put(keys[i], values[i]);
+		for(int keysIndex = 0; keysIndex < keys.length; keysIndex++)
+			defaults.put(keys[keysIndex], values[keysIndex]);
 	}
 
 	static String set(String key, String value) {

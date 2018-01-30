@@ -59,8 +59,8 @@ public class TestScoreProcess {
 	}
 
 	private static void getDataInput() {
-		for(int i = 0; i < studentsCount; i++) {
-			System.out.printf("Enter student name (#%d) : ", i + 1);
+		for(int studentIndex = 0; studentIndex < studentsCount; studentIndex++) {
+			System.out.printf("Enter student name (#%d) : ", studentIndex + 1);
 			TSPData.addStudent(scanner.nextLine());
 
 			scoresInput:
@@ -70,15 +70,15 @@ public class TestScoreProcess {
 				double[] scoresTmpArr = new double[scoresTmp.length + 2];
 				if(scoresTmp.length != subjects.length) System.out.println("Wrong input! Please check your input.");
 				else {
-					for(int o = 0; o < scoresTmp.length; o++) {
-						if(NumberProcess.parseDouble(scoresTmp[o])[0] == 1)
-							scoresTmpArr[o] = NumberProcess.parseDouble(scoresTmp[o])[1];
+					for(int scoresTmpIndex = 0; scoresTmpIndex < scoresTmp.length; scoresTmpIndex++) {
+						if(NumberProcess.parseDouble(scoresTmp[scoresTmpIndex])[0] == 1)
+							scoresTmpArr[scoresTmpIndex] = NumberProcess.parseDouble(scoresTmp[scoresTmpIndex])[1];
 						else {
-							System.out.printf("Entered score \"%s\" (%s) is incorrect score! Please check your input.\n", scoresTmp[o], subjects[o]);
+							System.out.printf("Entered score \"%s\" (%s) is incorrect score! Please check your input.\n", scoresTmp[scoresTmpIndex], subjects[scoresTmpIndex]);
 							continue scoresInput;
 						}
 					}
-					TSPData.setScores(i, scoresTmpArr);
+					TSPData.setScores(studentIndex, scoresTmpArr);
 					break;
 				}
 			}
@@ -86,11 +86,11 @@ public class TestScoreProcess {
 	}
 
 	private static void printResult() {
-		for(int i = 0; i < TSPData.getIndex(); i++) {
-			String[][] studentData = TSPData.getStudent(i);
-			System.out.printf("Student %s (#%d) scores\n", studentData[0][0], i + 1);
-			for(int o = 0; o < subjects.length; o++)
-				System.out.printf("\t%s(#%s) : %s\n", subjects[o], studentData[2][o], studentData[1][o]);
+		for(int tspDataIndex = 0; tspDataIndex < TSPData.getIndex(); tspDataIndex++) {
+			String[][] studentData = TSPData.getStudent(tspDataIndex);
+			System.out.printf("Student %s (#%d) scores\n", studentData[0][0], tspDataIndex + 1);
+			for(int subjectIndex = 0; subjectIndex < subjects.length; subjectIndex++)
+				System.out.printf("\t%s(#%s) : %s\n", subjects[subjectIndex], studentData[2][subjectIndex], studentData[1][subjectIndex]);
 			System.out.printf("\tOverall(#%s) (Average) : %s (%s)\n\n", studentData[2][subjects.length], studentData[1][subjects.length], studentData[1][subjects.length + 1]);
 		}
 	}
